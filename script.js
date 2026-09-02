@@ -6,17 +6,24 @@ function unlock() {
   const e = document.getElementById("err");
 
   if (p.value === PASSWORD) {
-    document.getElementById("lock").hidden = true;
-    document.getElementById("main").hidden = false;
-    e.style.display = "none";
-    updateCounter();
+  document.getElementById("lock").hidden = true;
+  document.getElementById("main").hidden = false;
 
-    if (!window.counterTimer) {
-      window.counterTimer = setInterval(updateCounter, 1000);
-    }
+  const music = document.querySelector("audio");
+  if (music) {
+    music.volume = 0.7;
+    music.play().catch(() => {});
+  }
 
-    window.scrollTo({top: 0, behavior: "instant"});
-  } else {
+  e.style.display = "none";
+  updateCounter();
+
+  if (!window.counterTimer) {
+    window.counterTimer = setInterval(updateCounter, 1000);
+  }
+
+  window.scrollTo({top: 0, behavior: "instant"});
+} else {
     e.style.display = "block";
     p.value = "";
     p.focus();
