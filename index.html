@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ถึงอ้วน 💗 Happy Anniversary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hearts" aria-hidden="true">♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥</div>
+
+<section id="lock" class="lock">
+  <div class="lock-card">
+    <div class="heart">♥</div>
+    <div class="eyebrow">A LITTLE SURPRISE FOR YOU</div>
+    <h1>ถึง <span>อ้วน</span> 💕</h1>
+    <p>เว็บนี้มีไว้ให้เธอคนเดียว<br>ใส่รหัสลับของเราเพื่อเปิดความทรงจำ</p>
+
+    <input id="pass" type="password" inputmode="numeric" maxlength="6"
+           placeholder="••••••" autocomplete="off" aria-label="รหัสผ่าน">
+
+    <button type="button" onclick="unlock()">เปิดเซอร์ไพรส์ 💗</button>
+    <small id="err">รหัสยังไม่ถูกนะ ลองใหม่อีกครั้งน้า 🥺</small>
+    <div class="hint">Hint: วันที่สำคัญของเรา 💌</div>
+  </div>
+</section>
+
+<main id="main" hidden>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">14.05.69 → 14.09.69</span>
+      <div class="eyebrow">HAPPY ANNIVERSARY</div>
+      <h1>สุขสันต์วันครบรอบนะ<br><span>อ้วนของเค้า</span> 💗</h1>
+      <p>เค้าทำเว็บนี้ไว้ให้เธอ เพราะอยากเก็บเรื่องราวเล็ก ๆ ของเราไว้ด้วยกัน</p>
+      <button class="white" type="button" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">เลื่อนลงไปดูสิ ↓</button>
+    </div>
+  </section>
+
+  <section id="story" class="section">
+    <div class="title">
+      <span>OUR LITTLE STORY</span>
+      <h2>ตั้งแต่วันนั้นจนถึงวันนี้ 🌷</h2>
+    </div>
+
+    <div class="timeline">
+      <article>
+        <b>14 พฤษภาคม 2569</b>
+        <h3>วันที่เราเริ่มต้นกัน 💞</h3>
+        <p>วันธรรมดา ๆ วันที่กลายเป็นหนึ่งในวันที่พิเศษที่สุดสำหรับเค้า</p>
+      </article>
+      <div class="dot">♥</div>
+      <article>
+        <b>14 กันยายน 2569</b>
+        <h3>ครบรอบ 4 เดือนแล้วนะ 🎀</h3>
+        <p>ขอบคุณที่เดินมาด้วยกันจนถึงวันนี้ และขอให้เรามีวันแบบนี้ไปอีกเยอะ ๆ เลย</p>
+      </article>
+    </div>
+
+    <div class="counter">
+      <h3>เราอยู่ด้วยกันมาแล้ว</h3>
+      <div class="numbers">
+        <div><strong id="days">0</strong><span>วัน</span></div>
+        <div><strong id="hours">00</strong><span>ชั่วโมง</span></div>
+        <div><strong id="minutes">00</strong><span>นาที</span></div>
+        <div><strong id="seconds">00</strong><span>วินาที</span></div>
+      </div>
+      <p>และเค้ายังอยากนับต่อไปเรื่อย ๆ กับอ้วนนะ 💗</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="title">
+      <span>LITTLE MEMORIES</span>
+      <h2>รูปของเรา 📸</h2>
+      <p>ทุกภาพมีความทรงจำของเราอยู่ในนั้น</p>
+    </div>
+
+    <div class="gallery">
+      <img src="photo1.jpg" onclick="view(this.src)" alt="ความทรงจำ 1">
+      <img src="photo2.jpg" onclick="view(this.src)" alt="ความทรงจำ 2">
+      <img src="photo3.jpg" onclick="view(this.src)" alt="ความทรงจำ 3">
+      <img src="photo4.jpg" onclick="view(this.src)" alt="ความทรงจำ 4">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="title">
+      <span>ONE MORE MEMORY</span>
+      <h2>คลิปของเรา 🎬</h2>
+    </div>
+
+    <div class="video card">
+      <video controls playsinline poster="photo2.jpg">
+        <source src="memory.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+      </video>
+      <p>เก็บช่วงเวลานี้ไว้ดูด้วยกันอีกหลาย ๆ รอบนะ 🥰</p>
+    </div>
+  </section>
+
+  <section class="section letter-section">
+    <div class="letter-wrap">
+      <div id="envelope" class="envelope">
+        <div class="letter">
+          <h3>ถึงอ้วน ❤️</h3>
+          <p>ขอบคุณนะที่เข้ามาเป็นส่วนหนึ่งในชีวิตเค้า</p>
+          <p>ตั้งแต่วันที่เราเริ่มคบกัน เค้าก็มีความสุขมากขึ้นในทุก ๆ วัน ถึงบางวันเราอาจมีงอนกันบ้าง ทะเลาะกันบ้าง แต่เค้าก็ยังอยากมีอ้วนอยู่ข้าง ๆ เหมือนเดิม</p>
+          <p>เค้าอาจจะไม่ได้เป็นคนที่ดีที่สุด แต่เค้าจะพยายามดูแลความสัมพันธ์ของเราให้ดีที่สุดเท่าที่เค้าทำได้</p>
+          <p><b>เค้ารักอ้วนมาก ๆ และอยากมีอ้วนอยู่ข้าง ๆ ไปนาน ๆ เลยนะ 🥰</b></p>
+          <p>ไม่ว่าจะผ่านไปกี่เดือนหรือกี่ปี เค้าก็ยังอยากจับมืออ้วนเดินไปด้วยกันนะ</p>
+          <p class="right">รักอ้วนนะ 💗<br>จากคนที่รักอ้วนที่สุด</p>
+        </div>
+        <div class="flap"></div>
+        <div class="front"></div>
+      </div>
+      <button type="button" onclick="openLetter()">เปิดจดหมายของเค้า 💌</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="music card">
+      <div class="disc">♪</div>
+      <div>
+        <div class="eyebrow">OUR SONG</div>
+        <h2>แค่มีเธอไปเตะคลื่นทะเลด้วยกัน 🌊</h2>
+        <p>ถ้ามีเพลงที่คุณมีสิทธิ์ใช้งาน ให้วางไฟล์ชื่อ <b>song.mp3</b> ไว้ในโฟลเดอร์ <b>music</b></p>
+      </div>
+      <audio controls>
+        <source src="music/song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="final card">
+      <div class="eyebrow">ONE LAST THING...</div>
+      <h2>มีอะไรจะบอกอ้วนอีกอย่าง 💕</h2>
+      <button type="button" onclick="surprise()">กดตรงนี้สิ 🎁</button>
+
+      <div id="finalMessage" hidden>
+        <div class="bigheart">♥</div>
+        <h3>รักอ้วนนะ</h3>
+        <p>Happy Anniversary 4 Months</p>
+        <p>14.05.69 → 14.09.69</p>
+        <p>ขอให้เราได้อยู่ด้วยกันแบบนี้ไปนาน ๆ เลยนะ 🌷</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>Made with love, just for Poon ♡</footer>
+</main>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="close-lightbox" type="button" aria-label="ปิด">×</button>
+  <img id="large" alt="รูปภาพขยาย">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
